@@ -6,17 +6,65 @@
   --font-sans: "Inter", sans-serif;
   --font-cormorant: "Cormorant Garamond", serif;
 
-  --color-cream: #FDFCF8;
-  --color-sage: #8BA88E;
-  --color-sage-dark: #5A725C;
-  --color-terracotta: #D97757;
-  --color-paper: #F5F2ED;
-  --color-ink: #2C2C2C;
+  --color-cream: var(--bg-color);
+  --color-fern: var(--primary-color);
+  --color-pistachio: var(--secondary-color);
+  --color-fennel: var(--bg-accent);
+  --color-peony: var(--accent-1);
+  --color-peach: var(--accent-2);
+  --color-honey: var(--accent-3);
+  --color-paper: var(--bg-accent);
+  --color-ink: var(--text-color);
+}
+
+:root {
+  /* Default: Soft Spring */
+  --bg-color: #FDFCF8;
+  --primary-color: #768E78;
+  --secondary-color: #C6C09C;
+  --bg-accent: #EBDEC0;
+  --accent-1: #E79897;
+  --accent-2: #FCAC83;
+  --accent-3: #FCC88A;
+  --text-color: #2C2C2C;
+}
+
+[data-theme='summer-bliss'] {
+  --bg-color: #FFFDF5;
+  --primary-color: #ABC270;
+  --secondary-color: #FEC868;
+  --bg-accent: #F9F4E8;
+  --accent-1: #FDA769;
+  --accent-2: #473C33;
+  --accent-3: #FEC868;
+  --text-color: #473C33;
+}
+
+[data-theme='calm-monsoon'] {
+  --bg-color: #B5C7CC;
+  --primary-color: #407D6C;
+  --secondary-color: #8BA1AD;
+  --bg-accent: #D1DDE0;
+  --accent-1: #244C66;
+  --accent-2: #587B89;
+  --accent-3: #7DB290;
+  --text-color: #244C66;
+}
+
+[data-theme='warm-winter'] {
+  --bg-color: #E6E0D2;
+  --primary-color: #2B4E43;
+  --secondary-color: #D7CABD;
+  --bg-accent: #F2EFE9;
+  --accent-1: #590411;
+  --accent-2: #956451;
+  --accent-3: #9FBACD;
+  --text-color: #2B4E43;
 }
 
 @layer base {
   body {
-    @apply bg-cream text-ink font-sans antialiased overflow-hidden;
+    @apply bg-cream text-ink font-sans antialiased overflow-hidden transition-colors duration-500;
   }
 }
 
@@ -25,7 +73,7 @@
 }
 
 .watercolor-bg {
-  background: radial-gradient(circle at 50% 50%, rgba(139, 168, 142, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--primary-color), transparent 90%) 0%, transparent 70%);
 }
 
 /* Hide scrollbars but allow scrolling */

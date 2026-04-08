@@ -69,7 +69,7 @@ export default function Logging({ onClose }: { onClose: () => void }) {
                 whileTap={{ scale: 0.95 }}
                 className={`
                   mt-4 self-end p-4 rounded-full transition-colors
-                  ${text.trim() ? 'bg-sage text-white shadow-lg' : 'bg-ink/5 text-ink/20'}
+                  ${text.trim() ? 'bg-fern text-white shadow-lg' : 'bg-ink/5 text-ink/20'}
                 `}
               >
                 <Send size={20} />
@@ -82,8 +82,8 @@ export default function Logging({ onClose }: { onClose: () => void }) {
               animate={{ scale: [1, 1.2, 0], opacity: [1, 1, 0], y: [0, -100, -300] }}
               className="flex flex-col items-center gap-4"
             >
-              <div className="w-4 h-4 bg-sage rounded-full animate-ping" />
-              <p className="font-cormorant italic text-sage text-xl">Releasing...</p>
+              <div className="w-4 h-4 bg-fern rounded-full animate-ping" />
+              <p className="font-cormorant italic text-fern text-xl">Releasing...</p>
             </motion.div>
           )}
         </AnimatePresence>

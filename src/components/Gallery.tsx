@@ -68,11 +68,11 @@ function MiniVase({ plantType, isKintsugi }: { plantType: string, isKintsugi: bo
     <div className="relative flex flex-col items-center">
       {/* Stylized Plant */}
       <div className="mb-[-10px] flex flex-col items-center">
-        <div className="w-1 h-12 bg-sage-dark rounded-full" />
-        <div className="absolute top-0 w-6 h-6 bg-sage/40 rounded-full blur-[2px]" />
+        <div className="w-1 h-12 bg-fern rounded-full" />
+        <div className="absolute top-0 w-6 h-6 bg-fern/40 rounded-full blur-[2px]" />
       </div>
       {/* Vase */}
-      <div className={`w-12 h-16 rounded-t-full rounded-b-xl relative overflow-hidden ${isKintsugi ? 'bg-slate-400' : 'bg-terracotta'}`}>
+      <div className={`w-12 h-16 rounded-t-full rounded-b-xl relative overflow-hidden ${isKintsugi ? 'bg-slate-400' : 'bg-peach'}`}>
         {isKintsugi && (
           <div className="absolute inset-0">
             <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">

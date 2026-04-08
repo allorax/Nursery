@@ -79,7 +79,7 @@ function NavButton({ active, onClick, icon, label }: { active: boolean; onClick:
       onClick={onClick}
       className={cn(
         "flex flex-col items-center gap-1 transition-all duration-300",
-        active ? "text-sage scale-110" : "text-ink/40 hover:text-ink/60"
+        active ? "text-fern scale-110" : "text-ink/40 hover:text-ink/60"
       )}
     >
       <motion.div
@@ -92,7 +92,7 @@ function NavButton({ active, onClick, icon, label }: { active: boolean; onClick:
       {active && (
         <motion.div 
           layoutId="nav-dot"
-          className="w-1 h-1 bg-sage rounded-full absolute -bottom-1"
+          className="w-1 h-1 bg-fern rounded-full absolute -bottom-1"
         />
       )}
     </button>

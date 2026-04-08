@@ -38,7 +38,7 @@ export default function Home({ onOpenLogging }: { onOpenLogging: () => void }) {
           </p>
           <div className="w-48 h-1 bg-ink/5 rounded-full mt-4 overflow-hidden">
             <motion.div 
-              className="h-full bg-sage"
+              className="h-full bg-fern"
               initial={{ width: 0 }}
               animate={{ width: `${growth}%` }}
               transition={{ duration: 1 }}
